@@ -1,0 +1,18 @@
+<ion-view view-title="optimize Ion-Slide-Box">
+  <ion-content scroll="false">
+    <ion-slide-box show-pager="false" does-continue="true" auto-play="false" active-slide="activeSlide" optimize-slides="items" >
+
+             <ion-slide ng-repeat="item in items">
+                <div class="imgHldr" ng-if="item.show">
+                    <img ng-src="{{item.imagePath}}" alt="Gut Check">
+                </div>
+                <h2 class="slideTitle bold text-center" ng-if="item.show">{{item.title}}</h2>
+
+                <ion-scroll ng-if="item.show">
+                    <p class="desc text-center size-15 dark">{{item.content}}</p>
+                </ion-scroll>
+            </ion-slide>
+
+        </ion-slide-box>
+  </ion-content>
+</ion-view>
