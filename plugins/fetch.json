@@ -4,5 +4,44 @@
             "type": "registry",
             "id": "com.ionic.keyboard"
         }
+    },
+    "org.devgeeks.privacyscreen": {
+        "source": {
+            "type": "registry",
+            "id": "org.devgeeks.privacyscreen"
+        }
+    },
+    "cordova-plugin-sslcertificatechecker": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EddyVerbruggen/SSLCertificateChecker-PhoneGap-Plugin",
+            "subdir": "."
+        }
+    },
+    "com.wongatech.cordova-disable-nsurl-cache": {
+        "source": {
+            "type": "registry",
+            "id": "com.wongatech.cordova-disable-nsurl-cache"
+        }
+    },
+    "com.danielcwilson.plugins.googleanalytics": {
+        "source": {
+            "type": "registry",
+            "id": "com.danielcwilson.plugins.googleanalytics"
+        }
+    },
+    "at.modalog.cordova.plugin.cache": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/harsh-iomedia/cordova-cache.git",
+            "subdir": "."
+        }
+    },
+    "com.phonegap.plugins.PushPlugin": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/harsh-iomedia/phonegap-pushplugin.git",
+            "subdir": "."
+        }
     }
 }

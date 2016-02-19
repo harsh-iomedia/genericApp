@@ -14,21 +14,33 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Generic App</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
+        <ion-item menu-close ui-sref="app.signup">
+          Sign-up Form validations
         </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
+        <ion-item menu-close ui-sref="app.optimizeSlides">
+          Optimize Ion-Slide-Box
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        <ion-item menu-close ui-sref="app.danwilsongoogleanalytics">
+          Danwilson Google Analytics
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close ui-sref="app.pushplugin">
+          Phonegap Pushplugin
+        </ion-item>
+        <ion-item menu-close ui-sref="app.privacyScreenPlugin">
+          Privacy Screen Plugin
+        </ion-item>
+        <ion-item menu-close ui-sref="app.sslcertificatechecker">
+          SSL Certificate Checker
+        </ion-item>
+        <ion-item menu-close ui-sref="app.disablensurlcache">
+          NSURL Cache Disbale (IOS) 
+        </ion-item>
+        <ion-item menu-close ui-sref="app.cordovacache">
+          Cordova Cache
         </ion-item>
       </ion-list>
     </ion-content>

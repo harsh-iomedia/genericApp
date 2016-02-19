@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="com.wongatech.cordova-disable-nsurl-cache"
+    version="0.0.1-dev">
+    
+    <name>CordovaDisableNSURLCache</name>
+    
+    <description>Cordova disable NSURL cache plugin</description>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaDisableNSURLCache">
+                <param name="ios-package" value="CordovaDisableNSURLCache" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/CordovaDisableNSURLCache.h" />
+        <source-file src="src/ios/CordovaDisableNSURLCache.m" />
+    </platform>
+</plugin>

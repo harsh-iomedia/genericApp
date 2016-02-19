@@ -1,0 +1,15 @@
+{
+    "version": "0.0.1-dev",
+    "name": "com.wongatech.cordova-disable-nsurl-cache",
+    "cordova_name": "CordovaDisableNSURLCache",
+    "description": "Cordova disable NSURL cache plugin",
+    "platforms": [
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

@@ -9730,3 +9730,62 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.pageView {
+  padding: 0 15px; }
+
+ol, ul {
+  padding-left: 20px;
+  list-style: normal; }
+
+.item-floating-label {
+  position: relative; }
+  .item-floating-label input {
+    width: 100%;
+    border: 1px solid rgba(120, 120, 120, 0.5);
+    padding: 10px 15px;
+    background: #FFF;
+    color: #000000;
+    line-height: normal;
+    height: 40px;
+    font-size: 16px; }
+    .item-floating-label input::-webkit-input-placeholder {
+      color: #999; }
+    .item-floating-label input:-moz-placeholder {
+      color: #999; }
+    .item-floating-label input::-moz-placeholder {
+      color: #999; }
+    .item-floating-label input:-ms-input-placeholder {
+      color: #999; }
+  .item-floating-label .input-label {
+    position: absolute;
+    font-size: 10px;
+    padding: 6px 0 0 15px;
+    width: auto;
+    top: 5px;
+    display: inline-block; }
+    .item-floating-label .input-label.has-input {
+      top: 2px; }
+      .item-floating-label .input-label.has-input + input, .item-floating-label .input-label.has-input + input + input {
+        padding: 20px 2px 3px 15px;
+        font-size: 14px; }
+  .item-floating-label input {
+    transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in; }
+  .item-floating-label.error-floating .input-label {
+    color: #A71D31; }
+  .item-floating-label.error-floating input {
+    border-top: 2px solid #A71D31;
+    color: #A71D31;
+    background-color: rgba(255, 0, 0, 0.1); }
+  .item-floating-label.success-floating .input-label:after {
+    display: block;
+    content: '\f122';
+    font-family: "Ionicons";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    top: 7px;
+    color: green; }
+  .item-floating-label.success-floating input {
+    border-top: 1px solid rgba(120, 120, 120, 0.5); }

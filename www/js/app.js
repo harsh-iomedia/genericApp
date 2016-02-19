@@ -25,42 +25,82 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 		controller: 'AppCtrl'
 	})
 
-	.state('app.optimizeSlides', {
-		url: '/optimize-ion-slide-box',
+	.state('app.signup', {
+		url: '/signup',
 		views: {
 			'menuContent': {
-				templateUrl: 'templates/optimizeIonSlideBox.html'
+				templateUrl: 'templates/signup.html',
+				controller:'signUpCtrl'
 			}
 		}
 	})
 
-	.state('app.browse', {
-			url: '/browse',
-			views: {
-				'menuContent': {
-					templateUrl: 'templates/browse.html'
-				}
-			}
-		})
-		.state('app.playlists', {
-			url: '/playlists',
-			views: {
-				'menuContent': {
-					templateUrl: 'templates/playlists.html',
-					controller: 'PlaylistsCtrl'
-				}
-			}
-		})
-
-	.state('app.single', {
-		url: '/playlists/:playlistId',
+	.state('app.optimizeSlides', {
+		url: '/optimize-ion-slide-box',
 		views: {
 			'menuContent': {
-				templateUrl: 'templates/playlist.html',
-				controller: 'PlaylistCtrl'
+				templateUrl: 'templates/optimizeIonSlideBox.html',
+				controller:'optimizeSlidesCtrl'
 			}
 		}
-	});
+	})
+
+	.state('app.privacyScreenPlugin', {
+		url: '/PrivacyScreenPlugin',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/privacyScreenPlugin.html'
+			}
+		}
+	})
+
+	.state('app.sslcertificatechecker', {
+		url: '/sslcertificatechecker',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/sslcertificatechecker.html'
+			}
+		}
+	})
+
+	.state('app.disablensurlcache', {
+		url: '/disablensurlcache',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/disablensurlcache.html'
+			}
+		}
+	})
+
+	.state('app.danwilsongoogleanalytics', {
+		url: '/danwilsongoogleanalytics',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/danwilsongoogleanalytics.html'
+			}
+		}
+	})
+
+	.state('app.cordovacache', {
+		url: '/cordovacache',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/cordovacache.html'
+			}
+		}
+	})
+	
+	.state('app.pushplugin', {
+		url: '/pushplugin',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/pushplugin.html'
+			}
+		}
+	})
+
+
+	;
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/app/playlists');
 }]);

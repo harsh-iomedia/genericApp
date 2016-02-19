@@ -1,0 +1,12 @@
+{
+    "version": "0.0.5",
+    "name": "org.devgeeks.privacyscreen",
+    "cordova_name": "PrivacyScreenPlugin",
+    "description": "Secures your app from displaying a screenshot in task switchers under Android and iOS. Keeps sensitive information private.",
+    "license": "MIT",
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": []
+}

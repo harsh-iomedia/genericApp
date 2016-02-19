@@ -15,7 +15,12 @@
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
-    "com.ionic.keyboard"
+    "com.ionic.keyboard",
+    "org.devgeeks.privacyscreen",
+    "https://github.com/EddyVerbruggen/SSLCertificateChecker-PhoneGap-Plugin",
+    "com.wongatech.cordova-disable-nsurl-cache",
+    "com.danielcwilson.plugins.googleanalytics",
+    "https://github.com/harsh-iomedia/cordova-cache.git"
   ],
   "cordovaPlatforms": []
 }
