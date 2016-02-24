@@ -4,37 +4,37 @@
       <div class="row">
         <div class="col item-floating-label" ng-class="{'error-floating':signUpForm.name_first.$invalid && signUpForm.$submitted, 'success-floating':signUpForm.name_first.$valid&& signUpForm.name_first.$touched}">
           <span class="input-label">First Name *</span>
-          <input type="text" placeholder="First Name*" required ng-pattern="/^[a-zA-Z0-9- ]+$/" name="name_first" ng-model="args.name_first" enter>
+          <input type="text" placeholder="First Name*" required ng-pattern="/^[a-zA-Z0-9- ]+$/" name="name_first" ng-model="args.name_first" >
         </div>
         <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.name_last.$invalid && signUpForm.$submitted,'success-floating':signUpForm.name_last.$valid && signUpForm.name_last.$touched}">
           <span class="input-label">Last Name *</span>
-          <input type="text" placeholder="Last Name*" name="name_last" ng-model="args.name_last" required ng-pattern="/^[a-zA-Z0-9- ]+$/" enter>
+          <input type="text" placeholder="Last Name*" name="name_last" ng-model="args.name_last" required ng-pattern="/^[a-zA-Z0-9- ]+$/" >
         </div>
       </div>
       <div class="row">
         <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.street_addr_1.$invalid && signUpForm.$submitted,'success-floating':signUpForm.street_addr_1.$valid && signUpForm.street_addr_1.$touched}">
           <span class="input-label">Street Address *</span>
-          <input type="text" placeholder="Street Address*" name="street_addr_1" ng-model="args.street_addr_1" required enter>
+          <input type="text" placeholder="Street Address*" name="street_addr_1" ng-model="args.street_addr_1" required >
         </div>
         <div class="col item-floating-label" ng-class="{'success-floating':signUpForm.street_addr_2.$valid && signUpForm.street_addr_2.$touched}">
           <span class="input-label">Street Address 2</span>
-          <input type="text" placeholder="Street Address 2" name="street_addr_2" ng-model="args.street_addr_2" enter>
+          <input type="text" placeholder="Street Address 2" name="street_addr_2" ng-model="args.street_addr_2" >
         </div>
       </div>
       <div class="row">
         <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.country.$invalid && signUpForm.$submitted,'success-floating':signUpForm.country.$valid && signUpForm.country.$touched}">
           <span class="input-label">Country *</span>
-          <input type="text" placeholder="Country*" name="country" ng-model="args.country" required ng-pattern="/^[a-zA-Z ]+$/" enter>
+          <input type="text" placeholder="Country*" name="country" ng-model="args.country" required ng-pattern="/^[a-zA-Z ]+$/" >
         </div>
         <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.city.$invalid && signUpForm.$submitted,'success-floating':signUpForm.city.$valid && signUpForm.city.$touched}">
           <span class="input-label">City *</span>
-          <input type="text" placeholder="City*" name="city" ng-model="args.city" required ng-pattern="/^[a-zA-Z ]+$/" enter>
+          <input type="text" placeholder="City*" name="city" ng-model="args.city" required ng-pattern="/^[a-zA-Z ]+$/" >
         </div>
       </div>
       <div class="row">
         <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.state.$invalid && signUpForm.$submitted,'success-floating':signUpForm.state.$valid && signUpForm.state.$touched}">
           <span class="input-label">State *</span>
-          <input type="text" placeholder="State*" name="state" ng-model="args.state" required ng-pattern="/^[a-zA-Z ]+$/" enter>
+          <input type="text" placeholder="State*" name="state" ng-model="args.state" required ng-pattern="/^[a-zA-Z ]+$/" >
         </div>
         <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.zip.$invalid && signUpForm.$submitted,'success-floating':signUpForm.zip.$valid && signUpForm.zip.$touched}">
           <span class="input-label">Zip Code *</span>

@@ -20,7 +20,9 @@
     "https://github.com/EddyVerbruggen/SSLCertificateChecker-PhoneGap-Plugin",
     "com.wongatech.cordova-disable-nsurl-cache",
     "com.danielcwilson.plugins.googleanalytics",
-    "https://github.com/harsh-iomedia/cordova-cache.git"
+    "https://github.com/harsh-iomedia/cordova-cache.git",
+    "org.apache.cordova.camera",
+    "net.yoik.cordova.plugins.screenorientation"
   ],
   "cordovaPlatforms": []
 }

@@ -9731,13 +9731,24 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.pageView {
-  padding: 0 15px; }
-
 ol, ul {
   padding-left: 20px;
   list-style: normal; }
 
+.pageView {
+  padding: 0 15px; }
+  .pageView .croppingTool {
+    margin-top: 15px; }
+
+.zoom {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+/* For the input validation */
 .item-floating-label {
   position: relative; }
   .item-floating-label input {
@@ -9757,6 +9768,10 @@ ol, ul {
       color: #999; }
     .item-floating-label input:-ms-input-placeholder {
       color: #999; }
+  .item-floating-label input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
   .item-floating-label .input-label {
     position: absolute;
     font-size: 10px;
@@ -9789,3 +9804,101 @@ ol, ul {
     color: green; }
   .item-floating-label.success-floating input {
     border-top: 1px solid rgba(120, 120, 120, 0.5); }
+
+/* End of input validation */
+/* For JR-Image-Crop */
+.modelView {
+  background: none; }
+
+.croppingArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #ececec; }
+  .croppingArea .popBtnHldr {
+    margin-top: 15px; }
+    .croppingArea .popBtnHldr a {
+      margin-right: 15px; }
+
+.cropArea {
+  overflow: hidden;
+  width: 100%;
+  height: 86%;
+  position: relative; }
+
+div.upload input {
+  display: block !important;
+  width: 157px !important;
+  height: 57px !important;
+  opacity: 0 !important;
+  overflow: hidden !important; }
+
+.jr-crop {
+  background-color: #000;
+  overflow: hidden; }
+
+.jr-crop-center-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.jr-crop-img {
+  opacity: 0.6; }
+
+div.upload {
+  width: 200px;
+  height: 100px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-repeat: no-repeat; }
+
+/* End of JR-Image-Crop */
+/* For ionic drawer */
+drawer {
+  display: block;
+  position: fixed;
+  width: 270px;
+  height: 100%;
+  z-index: 100;
+  background: #ffffff; }
+  drawer.animate {
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out; }
+  drawer.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.3); }
+  drawer.right {
+    right: 0;
+    top: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.3); }
+
+.sideOnMenuOpen {
+  z-index: 15;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/* End ionic drawer */

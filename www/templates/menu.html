@@ -1,48 +1,64 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-
       <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-        </button>
+        <button class="button button-icon button-clear ion-navicon" ng-click="openSideMenu()"></button>
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left">
+
+  <div class="sideOnMenuOpen zoom" ng-show="showOnMenuOpen" ng-click="closeSideMenu()"></div>
+  <drawer class="sidebar" side="left" id="drawerSideMenu">
     <ion-header-bar class="bar-stable">
       <h1 class="title">Generic App</h1>
     </ion-header-bar>
     <ion-content>
-      <ion-list>
-        <ion-item menu-close ui-sref="app.signup">
+      <ion-list ng-click="closeSideMenu()">
+        <ion-item ui-sref="app.signup">
           Sign-up Form validations
         </ion-item>
-        <ion-item menu-close ui-sref="app.optimizeSlides">
+        <ion-item ui-sref="app.optimizeSlides">
           Optimize Ion-Slide-Box
         </ion-item>
-        <ion-item menu-close ui-sref="app.danwilsongoogleanalytics">
+        <ion-item ui-sref="app.danwilsongoogleanalytics">
           Danwilson Google Analytics
         </ion-item>
-        <ion-item menu-close ui-sref="app.pushplugin">
+        <ion-item ui-sref="app.pushplugin">
           Phonegap Pushplugin
         </ion-item>
-        <ion-item menu-close ui-sref="app.privacyScreenPlugin">
+        <ion-item ui-sref="app.privacyScreenPlugin">
           Privacy Screen Plugin
         </ion-item>
-        <ion-item menu-close ui-sref="app.sslcertificatechecker">
+        <ion-item ui-sref="app.sslcertificatechecker">
           SSL Certificate Checker
         </ion-item>
-        <ion-item menu-close ui-sref="app.disablensurlcache">
+        <ion-item ui-sref="app.disablensurlcache">
           NSURL Cache Disbale (IOS) 
         </ion-item>
-        <ion-item menu-close ui-sref="app.cordovacache">
+        <ion-item ui-sref="app.cordovacache">
           Cordova Cache
+        </ion-item>
+        <ion-item ui-sref="app.imageCrop">
+          Image Crop
+        </ion-item>
+        <ion-item ui-sref="app.screenOrientation">
+          Screen Orientation
+        </ion-item>
+        <ion-item ui-sref="app.shrinkingHeader">
+          Shrinking Header
+        </ion-item>
+        <ion-item ui-sref="app.keypadGo">
+          Keypad Go Button
+        </ion-item>
+        <ion-item ui-sref="app.searchBtn">
+          Search Button
+        </ion-item>
+        <ion-item ui-sref="app.detailRegEx">
+          Detail on RegEx
         </ion-item>
       </ion-list>
     </ion-content>
-  </ion-side-menu>
+  </drawer>
 </ion-side-menus>

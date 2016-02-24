@@ -43,5 +43,17 @@
             "url": "https://github.com/harsh-iomedia/phonegap-pushplugin.git",
             "subdir": "."
         }
+    },
+    "org.apache.cordova.camera": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.camera"
+        }
+    },
+    "net.yoik.cordova.plugins.screenorientation": {
+        "source": {
+            "type": "registry",
+            "id": "net.yoik.cordova.plugins.screenorientation"
+        }
     }
 }
