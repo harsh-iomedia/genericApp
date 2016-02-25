@@ -225,3 +225,11 @@ drawer{
   height: 100%;
 }
 /* End ionic drawer */
+
+
+/* When the top bar flicker use this css for on the header */
+
+.nav-bar-block{
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
