@@ -1,0 +1,30 @@
+<ion-view view-title="Phonegap Pushplugin">
+  <ion-content class="pageView">
+    <h1>Phonegap Pushplugin</h1>
+    <p>This plugin is for use with Cordova, and allows your application to receive push notifications on Amazon Fire OS, Android, iOS, Windows Phone and Windows8 devices.</p>
+
+    <h2>Purpose</h2>
+    <p>We modified the plugin to support the notification icon on Android 5+. Doing so you can use this plugin 2 ways.</p>
+    <ol type="1">
+        <li style="list-style-type:decimal">Create a png icon file with named <mark>ic_notify.png</mark> and place it in following places
+            <ul style="list-style-type:disc">
+                <li>resources/android/icon/ic_notify.png</li>
+                <li>platform/android/res/drawable/ic_notify.png</li>
+                <li>platform/android/res/drawable-hdpi/ic_notify.png</li>
+                <li>platform/android/res/drawable-ldpi/ic_notify.png</li>
+                <li>platform/android/res/drawable-mdpi/ic_notify.png</li>
+                <li>platform/android/res/drawable-xhdpi/ic_notify.png</li>
+                <li>platform/android/res/drawable-xxhdpi/ic_notify.png</li>
+                <li>platform/android/res/drawable-xxxhdpi/ic_notify.png</li>
+            </ul>
+        </li>
+        <li style="list-style-type:decimal">Otherwise use the default icon of the application by changing in the plugin code-base at <b>location(file path):</b> <mark>plugins/com.phonegap.plugins.PushPlugin/src/android/com/plugin/gcm/GCMIntentService.java</mark> at <b>line no:130</b> <code><mark>drawable/ic_notify</mark> to <mark>drawable/icon</mark></code></li>
+    </ol>
+
+    <h2>Installation</h2>
+    <p><b>cordova plugin add https://github.com/harsh-iomedia/phonegap-pushplugin.git</b></p>
+
+    <h2>Github link</h2>
+    <a href="https://github.com/harsh-iomedia/phonegap-pushplugin" target="_blank">Click Here</a>
+  </ion-content>
+</ion-view>

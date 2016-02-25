@@ -1,0 +1,22 @@
+<ion-view view-title="Privacy Screen Plugin">
+  <ion-content class="pageView">
+    <h1>Privacy Screen Plugin</h1>
+    <p>Both iOS (as of iOS 7) and Android have app switchers that display a screenshot of your app.</p>
+
+		<p>This is a lovely feature for most apps, but if your app displays sensitive information this is a possible privacy risk.</p>
+
+		<p>This plugin flags your app so that it doesn't show your users' sensitive data in the task switcher. It sets the FLAG_SECURE flag in Android (which also prevents manual screenshots from being taken) and hides the window in iOS.</p>
+
+		<p>On iOS this plugin will try to show your splashscreen in the app switcher. It will search for splashscreens prefixed by Default or the value of the key UILaunchImageFile in your .plist file. If it fails to find a splashscreen for a specific device or orientation (portrait or landscape), a black screen is shown instead.</p>
+
+		<H2>Installation</H2>
+		<p>To add this plugin just type: <b>cordova plugin add cordova-plugin-privacyscreen</b> or <b>phonegap local plugin add cordova-plugin-privacyscreen</b></p>
+
+		<h2>Usage:</h2>
+		<p>This plugin exposes no interface, it simply sets your app to be private. You don't need to do anything except install the plugin.</p>
+		<p>Test this plugin on a real device because the iOS simulator (7.1 at least) does a poor job hiding your app.</p>
+
+		<h2>Github link</h2>
+		<a href="https://github.com/devgeeks/PrivacyScreenPlugin" target="_blank">Click Here</a>
+  </ion-content>
+</ion-view>
