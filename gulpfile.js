@@ -4,6 +4,11 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var request = require('request');
+var remoteSrc = require('gulp-remote-src');
+var jsonSass = require('json-sass');
+var source = require('vinyl-source-stream');
+var fs = require('fs');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
@@ -43,3 +48,34 @@ gulp.task('lib',function(){
   .pipe(uglify())
   .pipe(gulp.dest('./www/builds'));
 });
+
+
+gulp.task('remote', function() {
+  var getConfig = function(){
+    return remoteSrc(['configs'], {
+      base: 'http://stp-atlfalcons-v3-stg.io-research.com/api/'
+    })
+    .pipe(rename({ extname: '.json' }))
+    .pipe(gulp.dest('./www/builds/'));
+  }
+  var jsonToSass = function(){
+    return fs.createReadStream('./www/builds/configs.json')
+    .pipe(jsonSass({
+      prefix: '$config: ',
+    }))
+    .pipe(source('./www/builds/configs.json'))
+    .pipe(rename('theme.scss'))
+    .pipe(gulp.dest('./scss/'));
+  }
+  return getConfig().on('end', jsonToSass);
+});
+
+/*gulp.task('jsonsass', function() {
+  return fs.createReadStream('./www/builds/configs.json')
+    .pipe(jsonSass({
+      prefix: '$config: ',
+    }))
+    .pipe(source('./www/builds/configs.json'))
+    .pipe(rename('theme.scss'))
+    .pipe(gulp.dest('./scss/'));
+});*/

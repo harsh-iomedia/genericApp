@@ -145,6 +145,15 @@ genericApp.config(['$stateProvider','$urlRouterProvider','$ionicConfigProvider',
 			}
 		}
 	})
+	.state('app.jsonToScss',{
+		url:'/jsonToScss',
+		views:{
+			'menuContent':{
+				templateUrl:'templates/jsonToScss.html',
+				controller:'jsonToScssCtrl'
+			}
+		}
+	})
 	;
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/app/signup');

@@ -24,7 +24,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// Import custom 
+@import "theme";
 
+// Custom Style
 ol,ul{
 	padding-left: 20px;
 	list-style: normal;
@@ -34,6 +37,9 @@ ol,ul{
 	padding: 0 15px;
 	.croppingTool{
 		margin-top: 15px;
+	}
+	.changeColor{
+		color:map-get($config, brand-color);
 	}
 }
 .zoom {

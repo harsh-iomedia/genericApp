@@ -9739,6 +9739,8 @@ ol, ul {
   padding: 0 15px; }
   .pageView .croppingTool {
     margin-top: 15px; }
+  .pageView .changeColor {
+    color: red; }
 
 .zoom {
   position: absolute;
