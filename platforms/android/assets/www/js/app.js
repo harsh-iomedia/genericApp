@@ -154,6 +154,15 @@ genericApp.config(['$stateProvider','$urlRouterProvider','$ionicConfigProvider',
 			}
 		}
 	})
+	.state('app.performance',{
+		url:'/performance',
+		views:{
+			'menuContent':{
+				templateUrl:'templates/performance.html',
+				controller:'performanceCtrl'
+			}
+		}
+	})
 	;
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/app/signup');

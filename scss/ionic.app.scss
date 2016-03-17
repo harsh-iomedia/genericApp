@@ -41,6 +41,9 @@ ol,ul{
 	.changeColor{
 		color:map-get($config, brand-color);
 	}
+	ol.olList {
+		list-style-type: decimal;
+	}
 }
 .zoom {
   position: absolute;

@@ -50,7 +50,7 @@ gulp.task('lib',function(){
 });
 
 
-gulp.task('remote', function() {
+gulp.task('jsonToSass', function() {
   var getConfig = function(){
     return remoteSrc(['configs'], {
       base: 'http://stp-atlfalcons-v3-stg.io-research.com/api/'

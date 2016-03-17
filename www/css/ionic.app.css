@@ -9741,6 +9741,8 @@ ol, ul {
     margin-top: 15px; }
   .pageView .changeColor {
     color: #A71D31; }
+  .pageView ol.olList {
+    list-style-type: decimal; }
 
 .zoom {
   position: absolute;
