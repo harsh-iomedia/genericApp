@@ -70,7 +70,7 @@ gulp.task('remote', function() {
   return getConfig().on('end', jsonToSass);
 });
 
-/*gulp.task('jsonsass', function() {
+gulp.task('jsonsass', function() {
   return fs.createReadStream('./www/builds/configs.json')
     .pipe(jsonSass({
       prefix: '$config: ',
@@ -78,4 +78,4 @@ gulp.task('remote', function() {
     .pipe(source('./www/builds/configs.json'))
     .pipe(rename('theme.scss'))
     .pipe(gulp.dest('./scss/'));
-});*/
+});

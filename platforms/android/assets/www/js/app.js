@@ -16,7 +16,10 @@ genericApp.run(['$ionicPlatform','CONSTANTS', function($ionicPlatform,CONSTANTS)
 	});
 }]);
 
-genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+genericApp.config(['$stateProvider','$urlRouterProvider','$ionicConfigProvider', function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+	$ionicConfigProvider.views.transition('none');
+	$ionicConfigProvider.views.swipeBackEnabled(false);
+
 	$stateProvider
 
 	.state('app', {
@@ -25,7 +28,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 		templateUrl: 'templates/menu.html',
 		controller: 'AppCtrl'
 	})
-
 	.state('app.signup', {
 		url: '/signup',
 		views: {
@@ -35,7 +37,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-
 	.state('app.optimizeSlides', {
 		url: '/optimize-ion-slide-box',
 		views: {
@@ -45,7 +46,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-
 	.state('app.privacyScreenPlugin', {
 		url: '/PrivacyScreenPlugin',
 		views: {
@@ -54,7 +54,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-
 	.state('app.sslcertificatechecker', {
 		url: '/sslcertificatechecker',
 		views: {
@@ -63,7 +62,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-
 	.state('app.disablensurlcache', {
 		url: '/disablensurlcache',
 		views: {
@@ -72,7 +70,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-
 	.state('app.danwilsongoogleanalytics', {
 		url: '/danwilsongoogleanalytics',
 		views: {
@@ -81,7 +78,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-
 	.state('app.cordovacache', {
 		url: '/cordovacache',
 		views: {
@@ -90,7 +86,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-	
 	.state('app.pushplugin', {
 		url: '/pushplugin',
 		views: {
@@ -99,7 +94,6 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-
 	.state('app.imageCrop', {
 		url: '/imageCrop',
 		views: {
@@ -109,7 +103,57 @@ genericApp.config(['$stateProvider','$urlRouterProvider', function($stateProvide
 			}
 		}
 	})
-
+	.state('app.screenOrientation', {
+		url: '/screenorientation',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/screenOrientation.html',
+				controller:'screenOrientationCtrl'
+			}
+		}
+	})
+	.state('app.shrinkingHeader', {
+		url: '/shrinkingHeader',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/shrinkingHeader.html',
+				controller:'shrinkingHeaderCtrl'
+			}
+		}
+	})
+	.state('app.keypadGo', {
+		url: '/keypadGo',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/keypadGo.html'
+			}
+		}
+	})
+	.state('app.searchBtn', {
+		url: '/searchBtn',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/searchBtn.html'
+			}
+		}
+	})
+	.state('app.detailRegEx', {
+		url: '/detailRegEx',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/detailRegEx.html'
+			}
+		}
+	})
+	.state('app.jsonToScss',{
+		url:'/jsonToScss',
+		views:{
+			'menuContent':{
+				templateUrl:'templates/jsonToScss.html',
+				controller:'jsonToScssCtrl'
+			}
+		}
+	})
 	;
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/app/signup');

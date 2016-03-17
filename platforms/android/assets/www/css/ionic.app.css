@@ -9739,6 +9739,8 @@ ol, ul {
   padding: 0 15px; }
   .pageView .croppingTool {
     margin-top: 15px; }
+  .pageView .changeColor {
+    color: #A71D31; }
 
 .zoom {
   position: absolute;
@@ -9768,6 +9770,10 @@ ol, ul {
       color: #999; }
     .item-floating-label input:-ms-input-placeholder {
       color: #999; }
+  .item-floating-label input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
   .item-floating-label .input-label {
     position: absolute;
     font-size: 10px;
@@ -9898,3 +9904,7 @@ drawer {
   height: 100%; }
 
 /* End ionic drawer */
+/* When the top bar flicker use this css for on the header */
+.nav-bar-block {
+  perspective: 1000px;
+  -webkit-perspective: 1000px; }

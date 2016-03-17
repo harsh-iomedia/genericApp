@@ -26,8 +26,6 @@ genericApp.directive('optimizeSlides', function () {
 });
 
 
-
-
 /*
   It is used to navigate the form, one field to another field by pressing mobile keypad 'GO' button.
   
@@ -47,7 +45,6 @@ genericApp.directive('enter', function() {
           for(var i=0;i<fields.length;i++){
             if(fields[i] == this){
               var index = i;
-              console.log("true",i)
             }
           }
           if(index > -1 && (index + 1) < fields.length){
@@ -58,3 +55,55 @@ genericApp.directive('enter', function() {
     }
   }
 });
+
+
+/* Shrinking Header */
+genericApp.directive('headerShrink',['$document', function($document) {
+  var fadeAmt;
+
+  var shrink = function(header, content, amt, max) {
+    amt = Math.min(max, amt);
+    fadeAmt = 1 - amt / max;
+    ionic.requestAnimationFrame(function() {
+      header.style[ionic.CSS.TRANSFORM] = 'translate3d(0, -' + amt + 'px, 0)';
+      for(var i = 0, j = header.children.length; i < j; i++) {
+        header.children[i].style.opacity = fadeAmt;
+      }
+    });
+  };
+  return {
+    restrict: 'A',
+    link: function($scope, $element, $attr) {
+      var starty = $scope.$eval($attr.headerShrink) || 0;
+      var shrinkAmt;
+      var amt;
+      var y = 0;
+      var prevY = 0;
+      var scrollDelay = 0.6;
+
+      var fadeAmt;
+      
+      var activeHeader = $document[0].body.querySelector('.nav-bar-block[nav-bar="active"] .bar-header');
+      var headerHeight = activeHeader.offsetHeight;
+      
+      function onScroll(e) {
+        var scrollTop = e.currentTarget.scrollTop;
+        if(scrollTop >= 0) {
+          y = Math.min(headerHeight / scrollDelay, Math.max(0, y + scrollTop - prevY));
+        } else {
+          y = 0;
+        }
+        ionic.requestAnimationFrame(function() {
+          fadeAmt = 1 - (y / headerHeight);
+          activeHeader.style[ionic.CSS.TRANSFORM] = 'translate3d(0, ' + -y + 'px, 0)';
+          $element[0].style[ionic.CSS.TRANSFORM] = 'translate3d(0, ' + -y + 'px, 0)';
+          for(var i = 0, j = activeHeader.children.length; i < j; i++) {
+            activeHeader.children[i].style.opacity = fadeAmt;
+          }
+        });
+        prevY = scrollTop;
+      }
+      $element.bind('scroll', onScroll);
+    }
+  }
+}]);
