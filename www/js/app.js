@@ -154,6 +154,31 @@ genericApp.config(['$stateProvider','$urlRouterProvider','$ionicConfigProvider',
 			}
 		}
 	})
+	.state('app.dynamicInput',{
+		url:'/dynamic-input',
+		resolve:{
+			jsonData:['$q','$http', function($q,$http){
+				var deferred = $q.defer();
+				$http({
+					url: './lib/inputFieldJson/dynamicInput.json',
+					method:"GET"
+				})
+				.success(angular.bind(this,function(data, status, headers, config) {
+					deferred.resolve(data, status);
+				}))
+				.error(angular.bind(this,function(data, status, headers, config) {
+					deferred.reject(data, status);
+				}));
+				return deferred.promise;
+			}]
+		},
+		views:{
+			'menuContent':{
+				templateUrl:'templates/dynamicInput.html',
+				controller:'dynamicInputCtrl'
+			}
+		}
+	})
 	.state('app.performance',{
 		url:'/performance',
 		views:{

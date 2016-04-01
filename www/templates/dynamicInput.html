@@ -1,0 +1,25 @@
+<ion-view view-title="Dynamic Input">
+  <ion-content scroll="false" class="pageView">
+		<form name="signUpForm" class="list" novalidate ng-submit="signUpFormSubmit(signUpForm)">
+      <div class="row" ng-repeat="jsonInput in jsonInputs">
+        <div class="col item-floating-label" ng-if="(jsonInput | isArray)" ng-repeat="jInputArray in jsonInput" 
+          ng-class="{'error-floating':signUpForm[jInputArray.name].$invalid && signUpForm.$submitted, 
+                     'success-floating':signUpForm[jInputArray.name].$valid&& signUpForm[jInputArray.name].$touched}">
+          <span class="input-label">{{jInputArray.placeholder}}</span>
+          <input name="{{jInputArray.name}}" type="{{jInputArray.type}}" placeholder="{{jInputArray.placeholder}}" ng-model="args[jInputArray.modal]" ng-pattern="jInputArray.pattern" ng-required="jInputArray.required">
+        </div>
+        <div class="col item-floating-label" ng-if="!(jsonInput | isArray)" 
+          ng-class="{'error-floating':signUpForm[jsonInput.name].$invalid && signUpForm.$submitted, 
+                     'success-floating':signUpForm[jsonInput.name].$valid&& signUpForm[jsonInput.name].$touched}">
+          <span class="input-label">{{jsonInput.placeholder}}</span>
+          <input name="{{jsonInput.name}}" type="{{jsonInput.type}}" placeholder="{{jsonInput.placeholder}}" ng-model="args[jsonInput.modal]" ng-pattern="jsonInput.pattern" ng-required="jsonInput.required">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="button button-dark button-full" type="submit">Continue</button>
+        </div>
+      </div>
+    </form>
+	</ion-content>
+</ion-view>
