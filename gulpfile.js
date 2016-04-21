@@ -9,6 +9,7 @@ var remoteSrc = require('gulp-remote-src');
 var jsonSass = require('json-sass');
 var source = require('vinyl-source-stream');
 var fs = require('fs');
+var jScrambler = require('gulp-jscrambler');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
@@ -39,8 +40,26 @@ gulp.task('scripts', function() {
   gulp.src(paths.js)
   .pipe(concat('app.min.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('./www/builds'));
-});
+  .pipe(gulp.dest('./www/builds'))
+  .pipe(jScrambler({
+    keys: {
+      accessKey: '0EA6CE2E959C41A7458E69AD31E52631901D242C',
+      secretKey: 'FE6D51004C2B0F0B99F87F3D73E6397977C61BCF'
+    },
+    params: {
+      mode:"mobile",
+      dot_notation_elimination: '%DEFAULT%',
+      rename_local: '%DEFAULT%',
+      whitespace: '%DEFAULT%',
+      function_reorder: '%DEFAULT%',
+      function_outlining:'%DEFAULT%',
+      duplicate_literals: '%DEFAULT%'
+    },
+    deleteProject: false
+  }))
+  .pipe(gulp.dest('./'));
+})
+
 
 gulp.task('lib',function(){
   gulp.src(paths.lib)
@@ -64,7 +83,7 @@ gulp.task('jsonToSass', function() {
       prefix: '$config: ',
     }))
     .pipe(source('./www/builds/configs.json'))
-    .pipe(rename('theme.scss'))
+    .pipe(rename('config.scss'))
     .pipe(gulp.dest('./scss/'));
   }
   return getConfig().on('end', jsonToSass);
@@ -76,6 +95,6 @@ gulp.task('jsonsass', function() {
       prefix: '$config: ',
     }))
     .pipe(source('./www/builds/configs.json'))
-    .pipe(rename('theme.scss'))
+    .pipe(rename('config.scss'))
     .pipe(gulp.dest('./scss/'));
 });
