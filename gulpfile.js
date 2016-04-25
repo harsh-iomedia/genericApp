@@ -5,6 +5,7 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var request = require('request');
+var inject = require('gulp-inject');
 var remoteSrc = require('gulp-remote-src');
 var jsonSass = require('json-sass');
 var source = require('vinyl-source-stream');
@@ -58,7 +59,21 @@ gulp.task('scripts', function() {
     deleteProject: false
   }))
   .pipe(gulp.dest('./'));
-})
+});
+
+gulp.task('inject_app',function(){
+  gulp
+  .src('./www/index.html')
+  .pipe(inject(gulp.src('./www/builds/app.min.js', {read: false}), {name: 'appJs',relative:true}))
+  .pipe(gulp.dest('./www'));
+});
+
+gulp.task('inject_revert_app',function(){
+  gulp
+  .src('./www/index.html')
+  .pipe(inject(gulp.src(paths.js, {read: false}), {name: 'appJs',relative:true}))
+  .pipe(gulp.dest('./www'));
+});
 
 
 gulp.task('lib',function(){
