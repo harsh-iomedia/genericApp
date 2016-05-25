@@ -1,0 +1,12 @@
+<ion-view view-title="Search Button">
+  <ion-content>
+    <form name="signUpForm" class="list" novalidate ng-submit="signUpFormSubmit(signUpForm)">
+      <div class="row">
+        <div class="col item-floating-label" ng-class="{'error-floating':signUpForm.search.$invalid && signUpForm.$submitted, 'success-floating':signUpForm.search.$valid&& signUpForm.search.$touched}">
+          <span class="input-label">Search Query</span>
+          <input type="search" placeholder="Search Query*" required name="search" ng-model="args.search" enter>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,162 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PrivacyScreenPlugin\"><param name=\"ios-package\" value=\"PrivacyScreenPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SSLCertificateChecker\"><param name=\"ios-package\" value=\"SSLCertificateChecker\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CordovaDisableNSURLCache\"><param name=\"ios-package\" value=\"CordovaDisableNSURLCache\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"ios-package\" value=\"UniversalAnalyticsPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Cache\"><param name=\"ios-package\" value=\"Cache\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"ios-package\" value=\"YoikScreenOrientation\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "Security.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreData.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "libz.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "libsqlite3.0.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "ImageIO.framework": [
+                        {
+                            "xml": true,
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "AssetsLibrary.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "MobileCoreServices.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "NSLocationWhenInUseUsageDescription": [
+                        {
+                            "xml": "<string />",
+                            "count": 1
+                        }
+                    ],
+                    "NSAppTransportSecurity": [
+                        {
+                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        },
+        "org.devgeeks.privacyscreen": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        },
+        "cordova-plugin-sslcertificatechecker": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        },
+        "com.wongatech.cordova-disable-nsurl-cache": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        },
+        "com.danielcwilson.plugins.googleanalytics": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        },
+        "at.modalog.cordova.plugin.cache": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        },
+        "org.apache.cordova.camera": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        },
+        "net.yoik.cordova.plugins.screenorientation": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        },
+        "cordova-plugin-transport-security": {
+            "PACKAGE_NAME": "com.ionicframework.genericapp117597"
+        }
+    },
+    "dependent_plugins": {}
+}

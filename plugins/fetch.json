@@ -37,13 +37,6 @@
             "subdir": "."
         }
     },
-    "com.phonegap.plugins.PushPlugin": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/harsh-iomedia/phonegap-pushplugin.git",
-            "subdir": "."
-        }
-    },
     "org.apache.cordova.camera": {
         "source": {
             "type": "registry",
@@ -54,6 +47,13 @@
         "source": {
             "type": "registry",
             "id": "net.yoik.cordova.plugins.screenorientation"
+        }
+    },
+    "cordova-plugin-transport-security": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/leecrossley/cordova-plugin-transport-security.git",
+            "subdir": "."
         }
     }
 }

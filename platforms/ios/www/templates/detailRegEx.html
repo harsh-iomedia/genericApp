@@ -1,0 +1,39 @@
+<ion-view view-title="Detail on regular expression">
+  <ion-content>
+    <form name="signUpForm" class="list" novalidate ng-submit="signUpFormSubmit(signUpForm)">
+      <div class="row">
+        <div class="col item-floating-label" ng-class="{'error-floating':signUpForm.name_first.$invalid && signUpForm.$submitted, 'success-floating':signUpForm.name_first.$valid&& signUpForm.name_first.$touched}">
+          <span class="input-label">First Name *</span>
+          <input type="text" placeholder="First Name*" required ng-pattern="/^[a-zA-Z0-9 ]+$/" name="name_first" ng-model="args.name_first" enter>
+        </div>
+        <div class="col">Alphabets and Number Only</div>
+      </div>
+      <div class="row">
+        <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.country.$invalid && signUpForm.$submitted,'success-floating':signUpForm.country.$valid && signUpForm.country.$touched}">
+          <span class="input-label">Country *</span>
+          <input type="text" placeholder="Country*" name="country" ng-model="args.country" required ng-pattern="/^[a-zA-Z ]+$/" enter>
+        </div>
+        <div class="col">Alphabet only</div>
+      </div>
+      <div class="row">
+        <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.email.$invalid && signUpForm.$submitted,'success-floating':signUpForm.email.$valid && signUpForm.email.$touched}">
+          <span class="input-label">Email</span>
+          <input type="text" placeholder="Email*" name="email" ng-model="args.email" required ng-pattern="/^\w+([\.+-]?\w+)*@\w+([\.-]?\w+)(\.\w{1,})+$/" enter>
+        </div>
+        <div class="col">Email Only</div>
+      </div>
+      <div class="row">
+        <div class="col item-floating-label" ng-class="{ 'error-floating' : signUpForm.zip.$invalid && signUpForm.$submitted,'success-floating':signUpForm.zip.$valid && signUpForm.zip.$touched}">
+          <span class="input-label">Zip Code *</span>
+          <input type="text" placeholder="Zip Code*" name="zip" ng-model="args.zip" required ng-pattern="/^[0-9]{5}$/" maxlength="5" minlength="5">
+        </div>
+        <div class="col">Number only:length:5</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="button button-dark button-full" type="submit">Continue</button>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
